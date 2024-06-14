@@ -12,10 +12,6 @@ git clone --single-branch --depth 1 git@github.com:TheKenkei/custom-ohmyzsh.git 
 echo "source $ZSH_CUSTOM/my-custom/custom.zsh" >> $ZSH_CUSTOM/example.zsh;
 ```
 
-```sh
-source ~/.zshrc
-```
-
 #INSTALL POWERLEVEL10K
 
 ```sh
@@ -26,4 +22,16 @@ source ~/.zshrc
 
 ```sh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+#EXPORT PLUGINS
+
+```sh
+ plugins=( git sudo z brew npm docker docker-compose gh zsh-syntax-highlighting web-search dirhistory)
+```
+
+#DONE
+
+```sh
+source ~/.zshrc
 ```
