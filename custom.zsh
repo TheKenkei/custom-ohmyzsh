@@ -1,5 +1,7 @@
 
 export NVM_DIR="$HOME/.nvm"
+export ZSH_CONFIG=${HOME}/.config/zsh/custom/my-custom/custom.zsh
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -82,6 +84,15 @@ function yy() {
 		cd "$new_directory"
 	fi
 	rm -f -- "$temp_file"
+}
+nvim() {
+  local nvim_exec="/home/linuxbrew/.linuxbrew/bin/nvim"
+  if [ -n "$1" ]; then
+    echo "$1"
+    "$nvim_exec" +NvimTreeToggle +TmuxNavigateRight "$@"
+  else
+    "$nvim_exec" +NvimTreeToggle "$@"
+  fi
 }
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
