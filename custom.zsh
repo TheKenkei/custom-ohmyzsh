@@ -86,3 +86,10 @@ function yy() {
 	fi
 	rm -f -- "$temp_file"
 }
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+[[ ! -f $ZSH_CUSTOM/my-custom/.p10k.zsh ]] || source $ZSH_CUSTOM/my-custom/.p10k.zsh 
