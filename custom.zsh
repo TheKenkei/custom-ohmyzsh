@@ -1,24 +1,28 @@
 
+export EDITOR=nvim
+export ZSHCONFIG=$ZSH_CUSTOM/my-custom/custom.zsh
+export H=/mnt/h/
+export G=/mnt/g/
+export DOWNLOAD=/mnt/g/Download/
 export NVM_DIR="$HOME/.nvm"
 export ZSH_CONFIG=${HOME}/.config/zsh/custom/my-custom/custom.zsh
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # bun completions
 [ -s "/home/kenkei/.bun/_bun" ] && source "/home/kenkei/.bun/_bun"
 
 
+alias ZSHCONFIGEDIT="nvim $ZSHCONFIG && clear && echo 'updating zsh config' && source $HOME/.zshrc"
 alias update="clear && echo source ~/.zshrc && source ~/.zshrc"
 alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissions"
 alias lg="lazygit"
-alias update="echp source ~/.zshrc && source ~/.zshrc"
 alias cl="clear"
+alias v="nvim"
+alias vim="nvim"
 
 alias precommit="npm run eslint ; npm run prettier && npm run test && npm run typecheck && npm run build && echo COMPLETE!!!"
 alias npm-clear="rm -rf ~/.npm; rm -rf ~/.cache"
 
-alias update="source ~/.zshrc"
 alias brew-update="brew update -d --auto-update --verbose --force --debug"
 alias cdd="cd $1 && ls"
 alias dc="docker compose"
@@ -94,7 +98,20 @@ nvim() {
     "$nvim_exec" +NvimTreeToggle "$@"
   fi
 }
+ff ()
+{
+  find . | grep $1 
+}
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+alias mkdir="mkdir -p"
+alias nginx_start_docker="docker run --rm -p 8080:8080 -v /home/kenkei/.config/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf -v .:/usr/share/nginx/html:ro  nginx"
+alias bun-clear="rm -rf ~/.cache/ ~/.bun/install/cache/ ~/.npm/"
+alias "npmi"="rm -rf $HOME/.npm node_modules/ && npm i"
+alias "yarni"="rm -rf $HOME/.yarn/berry/ $HOME/.cache/yarn node_modules && yarn"
 
 # plugins=( git sudo z brew npm docker docker-compose gh zsh-syntax-highlighting web-search dirhistory)
+#
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
