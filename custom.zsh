@@ -13,8 +13,13 @@ export ZSH_CONFIG=${HOME}/.config/zsh/custom/my-custom/custom.zsh
 
 
 alias ZSHCONFIGEDIT="nvim $ZSHCONFIG && clear && echo 'updating zsh config' && source $HOME/.zshrc"
+alias NVIMCONFIGEDIT="cd ~/.config/nvim/lua ; nvim ; cd - " 
+
 alias update="clear && echo source ~/.zshrc && source ~/.zshrc"
-alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissions"
+alias ls="eza --tree  --level=1 --icons=always --no-time --group-directories-first --no-user --no-permissions"
+alias l="eza --tree  --long --all --group-directories-first --level=1 --icons=always -h --git"
+alias l-size="l --total-size"
+alias npm="npm -d"
 alias lg="lazygit"
 alias cl="clear"
 alias v="nvim"
@@ -89,15 +94,6 @@ function yy() {
 	fi
 	rm -f -- "$temp_file"
 }
-nvim() {
-  local nvim_exec="/home/linuxbrew/.linuxbrew/bin/nvim"
-  if [ -n "$1" ]; then
-    echo "$1"
-    "$nvim_exec" +NvimTreeToggle +TmuxNavigateRight "$@"
-  else
-    "$nvim_exec" +NvimTreeToggle "$@"
-  fi
-}
 ff ()
 {
   find . | grep $1 
@@ -109,9 +105,13 @@ alias nginx_start_docker="docker run --rm -p 8080:8080 -v /home/kenkei/.config/n
 alias bun-clear="rm -rf ~/.cache/ ~/.bun/install/cache/ ~/.npm/"
 alias "npmi"="rm -rf $HOME/.npm node_modules/ && npm i"
 alias "yarni"="rm -rf $HOME/.yarn/berry/ $HOME/.cache/yarn node_modules && yarn"
+alias nx="npx nx"
+alias create-nx-workspace="npx create-nx-workspace"
+alias nvim-delete-all="rm -rf ~/.config/nvim ~/.local/{share,state}/nvim ~/.cache/nvim"
+alias nvim-clear="rm -rf  ~/.local/{share,state}/nvim ~/.cache/nvim"
 
-# plugins=( git sudo z brew npm docker docker-compose gh zsh-syntax-highlighting web-search dirhistory)
-#
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# plugins=( git sudo z brew npm docker docker-compose gh zsh-syntax-highlighting web-search dirhistory)

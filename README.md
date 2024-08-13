@@ -5,11 +5,11 @@ ZSH="$HOME/.config/zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/oh
 ```
 
 ```sh
-git clone --single-branch --depth 1 git@github.com:TheKenkei/custom-ohmyzsh.git $ZSH_CUSTOM/my-custom;
+git clone --single-branch --depth 1 git@github.com:TheKenkei/custom-ohmyzsh.git $ZSH_CUSTOM/kenkei;
 ```
 
 ```sh
-echo "source $ZSH_CUSTOM/my-custom/custom.zsh" >> $ZSH_CUSTOM/example.zsh;
+echo "source $ZSH_CUSTOM/kenkei/custom.zsh" >> $ZSH_CUSTOM/example.zsh;
 ```
 
 #### POWERLEVEL10K
