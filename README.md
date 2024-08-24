@@ -5,7 +5,7 @@ ZSH="$HOME/.config/zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/oh
 ```
 
 ```sh
-git clone --single-branch --depth 1 git@github.com:TheKenkei/custom-ohmyzsh.git $ZSH_CUSTOM/kenkei;
+git clone --single-branch --depth 1 https://github.com/TheKenkei/custom-ohmyzsh.git $ZSH_CUSTOM/kenkei;
 ```
 
 ```sh
