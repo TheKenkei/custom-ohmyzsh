@@ -1,7 +1,7 @@
 # INSTALL
 
 ```sh
-ZSH="$HOME/.config/zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
+ZSH="$HOME/.config/kenkei/zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 ```
 
 ```sh
