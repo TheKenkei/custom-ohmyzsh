@@ -30,6 +30,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
  plugins=( git sudo z brew npm docker docker-compose gh zsh-syntax-highlighting web-search dirhistory)
 ```
 
+#### ADD TMUX
+
+```sh
+ ln -s ~/.config/kenkei/zsh/custom/kenkei/tmux.conf ~/.tmux.conf
+```
+
 # DONE
 
 ```sh
