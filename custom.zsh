@@ -3,6 +3,7 @@ source $ZSH_KENKEI_FOLDER/exports/init.zsh
 source $ZSH_KENKEI_FOLDER/aliases/init.zsh
 source $ZSH_KENKEI_FOLDER/functions/init.zsh
 
+export TMUX_THEME="nord"
 export PLAYWRIGHT_BROWSERS_PATH=$HOME/pw-browsers
 # source $ZSH_KENKEI_FOLDER/themes/kenkei.zsh-theme; 
 

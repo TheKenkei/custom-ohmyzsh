@@ -4,6 +4,7 @@ source $ALIASES_FOLDER/docker.zsh
 source $ALIASES_FOLDER/tmux.zsh
 source $ALIASES_FOLDER/packages.zsh
 source $ALIASES_FOLDER/nvim.zsh
+source $ALIASES_FOLDER/motions.zsh
 
 
 
