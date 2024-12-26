@@ -1,3 +1,13 @@
+#VIM MOTION 
+#
+bindkey "^[h" backward-char  # Перемещение влево на один символ
+bindkey "^[l" forward-char   # Перемещение вправо на один символ
+
+# set -o vi
+# bindkey -M viins "j" down-line-or-history
+# bindkey -M viins "k" up-line-or-history
+
+
 bindkey "^[w" forward-word
 bindkey "^[b" backward-word
 bindkey "^[d" kill-word

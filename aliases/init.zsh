@@ -22,3 +22,4 @@ alias nginx_start_docker="docker run --rm -p 8080:8080 -v /home/kenkei/.config/n
 alias bun-clear="rm -rf ~/.cache/ ~/.bun/install/cache/ ~/.npm/"
 alias nvim-delete-all="rm -rf ~/.config/nvim ~/.local/{share,state}/nvim ~/.cache/nvim"
 alias nvim-clear="rm -rf  ~/.local/{share,state}/nvim ~/.cache/nvim"
+alias cat="bat"

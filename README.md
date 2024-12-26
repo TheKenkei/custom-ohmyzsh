@@ -33,7 +33,14 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 #### ADD TMUX
 
 ```sh
- ln -s ~/.config/kenkei/zsh/custom/kenkei/tmux.conf ~/.tmux.conf
+ ln -s ~/.config/kenkei/zsh/custom/kenkei/tmux/tmux.conf ~/.tmux.conf
+```
+
+#### OTHER
+
+```sh 
+brew install bat
+
 ```
 
 # DONE
